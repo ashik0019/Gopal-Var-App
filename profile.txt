@@ -1,0 +1,79 @@
+import React, { Component } from 'react'
+import { Text, StyleSheet, View,ImageBackground,Image, ScrollView } from 'react-native'
+
+export default class Potfolio extends Component {
+    render() {
+        return (
+            <View style={{flex: 1,}}>
+               <ImageBackground source={require('../images/background.png')} style={styles.backgroundImg}>
+                <Image style={styles.profileImage} source={require('../images/profile.png')}/>
+                        <Text style={styles.proName}>Md Ashiqur Rahman</Text>
+                        <Text style={{fontSize: 16, color: '#ddd', paddingBottom: 10, }}>Dhaka</Text>
+                </ImageBackground>
+                <ScrollView>
+                    <View style={{flex: 1,}}>
+                        <Text style={{marginHorizontal: 15, marginTop: 15, fontSize: 18,}}>About Me</Text>
+                        <Text style={{marginHorizontal: 15, paddingTop: 4, color: '#696969', textAlign: 'justify', borderBottomColor: '#b1b1b1', borderBottomWidth: 1, paddingBottom: 10}}>
+                            Lorem Ipsum is simply dummy text of the printing and 
+                            typesetting industry. Lorem Ipsum has been dummy text ever since the 1500s,simply dummy text of and 
+                            typesetting industry.
+                        </Text>
+                    </View>
+                    <View style={{flex: 1,}}>
+                        <Text style={{marginHorizontal: 15, marginTop: 15, fontSize: 18, paddingBottom: 5}}>My Previous Location</Text>
+                        <Text style={{marginHorizontal: 15, paddingTop: 8, color: '#696969', textAlign: 'justify'}}>
+                            MALAYSIA
+                        </Text>
+                        <Text style={{marginHorizontal: 15, color: '#696969', textAlign: 'justify'}}>Penung visited many times</Text>
+                        <Text style={{marginHorizontal: 15, paddingTop: 8, color: '#696969', textAlign: 'justify'}}>
+                            CANADA
+                        </Text>
+                        <Text style={{marginHorizontal: 15, color: '#696969', textAlign: 'justify'}}>Penung visited 2 times</Text>
+                        <Text style={{marginHorizontal: 15, paddingTop: 8, color: '#696969', textAlign: 'justify'}}>
+                            USA
+                        </Text>
+                        <Text style={{marginHorizontal: 15, color: '#696969', textAlign: 'justify'}}>Penung visited 1 time</Text>
+                        <Text style={{marginHorizontal: 15, paddingTop: 8, color: '#696969', textAlign: 'justify'}}>
+                            JAPAN
+                        </Text>
+                        <Text style={{marginHorizontal: 15, color: '#696969', textAlign: 'justify'}}>Penung visited 10 times</Text>
+                        <View style={{borderBottomColor: '#b1b1b1', borderBottomWidth: 1, paddingBottom: 10, marginHorizontal: 15}}></View>
+                    </View>
+                    <View style={{flex: 1,}}>
+                        <Text style={{marginHorizontal: 15, marginTop: 15, fontSize: 18, paddingBottom: 5}}>My Hobby</Text>
+                        <Text style={{marginHorizontal: 15, paddingTop: 4, color: '#696969', textAlign: 'justify', borderBottomColor: '#b1b1b1', borderBottomWidth: 1, paddingBottom: 10}}>
+                            Lorem Ipsum is simply dummy text of the printing and 
+                            typesetting industry. Lorem Ipsum has been dummy text ever since the 1500s,simply dummy text of and 
+                            typesetting industry.
+                        </Text>
+                        
+                    </View>
+                </ScrollView>
+            </View>
+        )
+    }
+}
+
+const styles = StyleSheet.create({
+    backgroundImg: {
+        width: undefined,
+        paddingTop: 30,
+        paddingBottom: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'red'
+    },
+    profileImage: {
+        width: 100,
+        height: 100,
+        borderRadius: 50,
+        borderColor: '#ddd',
+        borderWidth: 1,
+
+    },
+    proName: {
+        fontSize: 18,
+        padding: 5,
+        color: 'white',
+    },
+})
